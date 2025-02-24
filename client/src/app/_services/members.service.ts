@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Member } from '../models/member';
@@ -11,10 +11,14 @@ export class MembersService {
   baseUrl = environment.apiUrl;
 
   getMembers() {
-    return this.http.get<Member[]>(this.baseUrl + 'users');
+    return this.http.get<Member[]>(
+      this.baseUrl + 'users'
+    );
   }
 
   getMember(username: string) {
-    return this.http.get<Member>(this.baseUrl + 'users/' + username);
+    return this.http.get<Member>(
+      this.baseUrl + 'users/' + username
+    );
   }
 }
