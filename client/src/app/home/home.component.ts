@@ -11,9 +11,6 @@ import { RegisterComponent } from '../register/register.component';
 export class HomeComponent  {
   registerMode = false;
 
-  // ngOnInit(): void {
-  //   this.getUsers();
-  // }
 
   registerToggle() {
     this.registerMode = !this.registerMode;
@@ -21,12 +18,5 @@ export class HomeComponent  {
   cancelRegisterMode(event: boolean) {
     this.registerMode = event;
   }
-
-  // getUsers() {
-  //   this.http.get('http://localhost:5000/api/users').subscribe({
-  //     next: (response) => (this.users = response),
-  //     error: (error) => console.log(error),
-  //     complete: () => console.log('Request has completed'),
-  //   });
-  // }
+ 
 }
